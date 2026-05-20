@@ -1,0 +1,23 @@
+baseURL: https://juanalvarado.me/
+languageCode: en-us
+title: Juan Alvarado
+theme: PaperMod
+
+params:
+  homeInfoParams:
+    Title: Juan Alvarado
+    Content: Photographer. Systems thinker. Often obtuse, occasionally original. Greenville, SC.
+  profileMode:
+    enabled: false
+  cover:
+    image: /images/hero.jpg
+    alt: Milky Way from my back porch
+
+menu:
+  main:
+    - name: Posts
+      url: /posts/
+      weight: 1
+    - name: Photography
+      url: /photography/
+      weight: 2

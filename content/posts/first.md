@@ -1,0 +1,24 @@
+---
+title: "The Pursuit of Almost"
+date: 2026-05-20
+draft: false
+---
+## 10 months
+I recently welcomed my first child to the world, got a new job, and moved across the country, all within the course of 4 months. I had set up a Dell Optiplex with a Ubuntu Server OS and a few home media server docker containers, including Jellyfin, the *arr suite, and a few other items for me to tinker around on. After the move, I unpacked that machine and it has since lain dormant inside of my organizer, unplugged and unmaintained. I've finally gotten around to plugging it in and beginning the update and maintenance process, but as I was getting everything fired up for the first time, I asked myself, "Why has it taken you so long to do something that comes nearly as naturally as breathing?"
+
+Back in 2019 when I got my Switch, I grabbed a copy of the Legend of Zelda BOTW. This game was everything I wanted in a Zelda title. Open-world, sandbox, non-linear, and packed with "hey I wonder what's over there" moments. In short, everything my ADHD brain would've wanted. By the end of week I was deep into unlocking towers, defeating shrines, and avoiding the roving guardians. 
+
+I avoided defeating the various champions and working my way closer to the confrontation with the final boss. I kept telling myself that I should look for the next piece of armor, or that I should find more arrows or weapons to make my time easier. I kept hunting lynels in order to get the best bows and components. All the bokoblins I encountered went from red to blue to gold. All (ok not all but many) of the korok seeds were hunted down. Guardians even became a triviality once I mastered the timing for parrying their laser strike. Giant Horse? Acquired. Full savage lynel gear? My daily drivers. DLC and special armor? Collected. Eventually I began to do the champion quests, shocked at how easy my progression was during these mini-boss fights. I kept putting off Calamity Ganon. I couldn't tell you why but it was a little scary to go on and take the steps into Hyrule Castle. It felt like a shame to rush to the end too quickly. A year passed and whenever I had some downtime I looked at my switch and kept putting off picking it up because I knew that the next confrontation would lead me deeper into Hyrule Castle to defeat Calamity Ganon. 
+
+Eventually, I realized that I was avoiding the crossing of a threshold. By every standard, BOTW had become a breeze for me. I had the armor, weapons, components, heart containers, and the skills to finish. The game stopped being challenging a long time ago.
+
+What I was avoiding was the closing of the chapter. In my mind, as long as something remains unfinished, the Schrödinger's kitty would always be at liberty to roam the plains of Hyrule in peace.
+
+I realized I had done the same thing with that server and with so many other things in my life. Defeating Ganon meant accepting that the game was over. Plugging in the server meant that I wouldn't be able to remain in the safety of plan-land and I'd have to implement and commit to one single path. All potential energy would need to be converted to kinetic energy, and to my mind, that part is always terrifying. What if I missed an armor set or a star shard on Hyrule? What if I accidentally left a port vulnerable to attack on my server? I could handle the exhaustion of new parenthood, moving across the country, finding and starting a new job, but I couldn't flip a switch on an old mini PC. 
+
+To me, the line between "not done yet" and "done" is more comfortable than finishing something. I think I spend more time preparing, optimizing, dreaming, and gathering info because crossing the threshold is far heavier to me than the actual work it took to get there. It means confronting finality, change, and the uncomfortable acceptance that time has passed. 
+
+## Conclusions
+If you have read this far and have recognized a bit of yourself in my words, hi there, welcome. If you are looking for a neat solution or method or fix for this behavior I don't have one. I'm not going to pretend that I have this figured out, I won't sell you a monthly course or a set of books that changed my life. I have tried and failed so many times to address this type of behavior in myself by planning my way out of it. 
+
+So I leave you with this. I mean, literally this, this article. Proof that I had an idea, planned and considered, and actually moved out of plan-land into the real world. The unfortunate solution to my condition is not to think about it more or prepare harder, it's to do the damn thing. I hope to be doing the damn thing more often with all the other projects and self-set goals I have in my life.

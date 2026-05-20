@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+  <div style="margin-bottom: 3rem;">
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Juan Alvarado</h1>
+    <p style="color: var(--secondary); font-size: 1rem;">
+      Photographer. Systems thinker. Often obtuse, occasionally original. Greenville, SC.
+    </p>
+  </div>
+
+  <div>
+    <h2 style="margin-bottom: 1.5rem;">Latest Post</h2>
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $latest := index ($posts.ByDate.Reverse) 0 }}
+    {{ with $latest }}
+    <div style="padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
+      <a href="{{ .Permalink }}" style="font-size: 1.3rem; font-weight: bold; text-decoration: underline;">{{ .Title }}</a>
+      <p style="color: var(--secondary); font-size: 0.85rem; margin: 0.25rem 0 0.5rem;">{{ .Date.Format "January 2, 2006" }}</p>
+      <p style="color: var(--secondary);">{{ .Summary | truncate 160 }}</p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
