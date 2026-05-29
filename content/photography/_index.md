@@ -1,9 +1,9 @@
 ---
 title: Photography
 photos:
-    - src: /images/photography/firstshot.png
+    - src: /images/photography/firstshot.jpg
       caption: First shot ever through the Canon AE-1 Program and a roll of Fuji 400.
-    - src: /images/photography/ribmtn.png
+    - src: /images/photography/ribmtn.jpg
       caption: A very green tinted shot of some rocks at the top of Rib Mountain in Wisconsin.
     - src: /images/photography/superiorwi.jpg
       caption: A snowy day during a vacation in Superior/Duluth.
