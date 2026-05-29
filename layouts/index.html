@@ -7,17 +7,33 @@
     </p>
   </div>
 
-  <div>
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $sorted := $posts.ByDate.Reverse }}
+  {{ $latest := index $sorted 0 }}
+  {{ $previous := after 1 $sorted }}
+
+  {{ with $latest }}
+  <div style="margin-bottom: 3rem;">
     <h2 style="margin-bottom: 1.5rem;">Latest Post</h2>
-    {{ $posts := where .Site.RegularPages "Section" "posts" }}
-    {{ $latest := index ($posts.ByDate.Reverse) 0 }}
-    {{ with $latest }}
     <div style="padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
       <a href="{{ .Permalink }}" style="font-size: 1.3rem; font-weight: bold; text-decoration: underline;">{{ .Title }}</a>
       <p style="color: var(--secondary); font-size: 0.85rem; margin: 0.25rem 0 0.5rem;">{{ .Date.Format "January 2, 2006" }}</p>
       <p style="color: var(--secondary);">{{ .Summary | truncate 160 }}</p>
     </div>
+  </div>
+  {{ end }}
+
+  {{ if $previous }}
+  <div>
+    <h2 style="margin-bottom: 1.5rem;">Previous Posts</h2>
+    {{ range $previous }}
+    <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);">
+      <a href="{{ .Permalink }}" style="font-size: 1.1rem; font-weight: bold; text-decoration: underline;">{{ .Title }}</a>
+      <p style="color: var(--secondary); font-size: 0.85rem; margin: 0.25rem 0 0.5rem;">{{ .Date.Format "January 2, 2006" }}</p>
+      <p style="color: var(--secondary);">{{ .Summary | truncate 120 }}</p>
+    </div>
     {{ end }}
   </div>
+  {{ end }}
 </div>
 {{ end }}
