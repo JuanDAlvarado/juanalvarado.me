@@ -1,6 +1,34 @@
 {{ define "main" }}
-<div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
   <h1 style="margin-bottom: 2rem;">Photography</h1>
-  <p style="color: var(--secondary);">Coming soon.</p>
+
+  <div id="grid" style="columns: 3; gap: 1rem;">
+    {{ range .Params.photos }}
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('{{ .src }}', '{{ .caption }}')">
+      <img src="{{ .src }}" alt="{{ .caption }}" style="width: 100%; display: block;">
+      {{ if .caption }}<p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">{{ .caption }}</p>{{ end }}
+    </div>
+    {{ end }}
+  </div>
 </div>
+
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; cursor:pointer; align-items:center; justify-content:center;">
+  <div style="max-width: 90vw; max-height: 90vh; text-align: center;">
+    <img id="lightbox-img" src="" style="max-width: 100%; max-height: 85vh; object-fit: contain;">
+    <p id="lightbox-caption" style="color: white; margin-top: 1rem; font-size: 0.9rem;"></p>
+  </div>
+</div>
+
+<script>
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-caption').textContent = caption || '';
+  lb.style.display = 'flex';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
 {{ end }}

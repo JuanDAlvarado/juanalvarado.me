@@ -110,10 +110,68 @@
     </nav>
 </header>
 <main class="main">
-<div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
   <h1 style="margin-bottom: 2rem;">Photography</h1>
-  <p style="color: var(--secondary);">Coming soon.</p>
+
+  <div id="grid" style="columns: 3; gap: 1rem;">
+    
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('\/images\/photography\/firstshot.png', 'First shot ever through the Canon AE-1 Program and a roll of Fuji 400.')">
+      <img src="/images/photography/firstshot.png" alt="First shot ever through the Canon AE-1 Program and a roll of Fuji 400." style="width: 100%; display: block;">
+      <p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">First shot ever through the Canon AE-1 Program and a roll of Fuji 400.</p>
+    </div>
+    
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('\/images\/photography\/ribmtn.png', 'A very green tinted shot of some rocks at the top of Rib Mountain in Wisconsin.')">
+      <img src="/images/photography/ribmtn.png" alt="A very green tinted shot of some rocks at the top of Rib Mountain in Wisconsin." style="width: 100%; display: block;">
+      <p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">A very green tinted shot of some rocks at the top of Rib Mountain in Wisconsin.</p>
+    </div>
+    
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('\/images\/photography\/superiorwi.jpg', 'A snowy day during a vacation in Superior\/Duluth.')">
+      <img src="/images/photography/superiorwi.jpg" alt="A snowy day during a vacation in Superior/Duluth." style="width: 100%; display: block;">
+      <p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">A snowy day during a vacation in Superior/Duluth.</p>
+    </div>
+    
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('\/images\/photography\/bridge.jpg', 'Taken on 09\/05\/22, this bridge was demolished 3 months later. A bridge spanning the Wisconsin River at the old junction of State Route 133 and State Route 130, just south of Lone Rock, WI.')">
+      <img src="/images/photography/bridge.jpg" alt="Taken on 09/05/22, this bridge was demolished 3 months later. A bridge spanning the Wisconsin River at the old junction of State Route 133 and State Route 130, just south of Lone Rock, WI." style="width: 100%; display: block;">
+      <p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">Taken on 09/05/22, this bridge was demolished 3 months later. A bridge spanning the Wisconsin River at the old junction of State Route 133 and State Route 130, just south of Lone Rock, WI.</p>
+    </div>
+    
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('\/images\/photography\/madisonwi.jpg', 'Taken while standing in line to get into an AJR concert during their Neotheater World Tour in Madison, WI.')">
+      <img src="/images/photography/madisonwi.jpg" alt="Taken while standing in line to get into an AJR concert during their Neotheater World Tour in Madison, WI." style="width: 100%; display: block;">
+      <p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">Taken while standing in line to get into an AJR concert during their Neotheater World Tour in Madison, WI.</p>
+    </div>
+    
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('\/images\/photography\/clemson.jpg', 'The Wilbur O. and Ann Powers College of Business on the campus of Clemson University.')">
+      <img src="/images/photography/clemson.jpg" alt="The Wilbur O. and Ann Powers College of Business on the campus of Clemson University." style="width: 100%; display: block;">
+      <p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">The Wilbur O. and Ann Powers College of Business on the campus of Clemson University.</p>
+    </div>
+    
+    <div style="break-inside: avoid; margin-bottom: 1rem; cursor: pointer;" onclick="openLightbox('\/images\/photography\/clemson2.jpg', 'A building on the campus of Clemson University.')">
+      <img src="/images/photography/clemson2.jpg" alt="A building on the campus of Clemson University." style="width: 100%; display: block;">
+      <p style="color: var(--secondary); font-size: 0.8rem; margin: 0.25rem 0 0;">A building on the campus of Clemson University.</p>
+    </div>
+    
+  </div>
 </div>
+
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; cursor:pointer; align-items:center; justify-content:center;">
+  <div style="max-width: 90vw; max-height: 90vh; text-align: center;">
+    <img id="lightbox-img" src="" style="max-width: 100%; max-height: 85vh; object-fit: contain;">
+    <p id="lightbox-caption" style="color: white; margin-top: 1rem; font-size: 0.9rem;"></p>
+  </div>
+</div>
+
+<script>
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-caption').textContent = caption || '';
+  lb.style.display = 'flex';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
 
     </main>
     
